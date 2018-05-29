@@ -1,10 +1,16 @@
 package net;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
 
 public class Net {
 
+	
+	HashMap<Integer,int[]> keys=new HashMap<>();
+	int key1[]={1,0};
+	int key2[]={0,1};
+	int key3[]={1,1};
 	Neuron1 n1;
 	Neuron1 n2;
 	Neuron1 n3;
@@ -37,6 +43,26 @@ public class Net {
 		warstwa2.add(n5);
 		warstwa2.add(n6);
 		
+		keys.put(1, key1);
+		keys.put(1, key1);
+		keys.put(1, key1);
+	}
+	//Lista z wagami kazdego i prog na koniec
+	public Net(ArrayList<double[]> l){
+		n1=new Neuron1(l.get(0));
+		n2=new Neuron1(l.get(1));
+		n3=new Neuron1(l.get(2));
+		n4=new Neuron1(l.get(3));
+		warstwa1=new ArrayList<>();
+		warstwa1.add(n1);
+		warstwa1.add(n2);
+		warstwa1.add(n3);
+		warstwa1.add(n4);
+		n5=new Neuron2(l.get(4));
+		n6=new Neuron2(l.get(5));
+		warstwa2=new ArrayList<>();
+		warstwa2.add(n5);
+		warstwa2.add(n6);
 	}
 	
 	
@@ -62,7 +88,7 @@ public class Net {
 		else return 0;
 	}
 	
-	public void uczenie(double[] v,int[] target){
+	public void ucz(double[] v,int[] target){
 		double net1[]=new double[warstwa1.size()];
 		int tmp=0;
 		for(Neuron1 n: warstwa1){
@@ -94,8 +120,10 @@ public class Net {
 		}
 
 	}
-	
-	
+	public void uczenie(){
+		//HashSet<> s=new HashSet();
+		
+	}
 	public void log(String s){
 		System.out.println(s);
 	}

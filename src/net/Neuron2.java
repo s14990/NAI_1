@@ -21,13 +21,13 @@ public class Neuron2 {
 		System.out.println(" prog:"+prog);
 	}
 	
-	public Neuron2(double[] w,double p){
+	public Neuron2(double[] w){
 		System.out.println(" loading neuron1 wagi: ");
-		for (int i=0;i<wagi.length;i++){
+		for (int i=0;i<wagi.length-1;i++){
 		wagi[i]=w[i];
 		System.out.print(" "+wagi[i]);
 		}
-		prog=p;
+		prog=w[wagi.length];
 		System.out.println(" prog:"+prog);
 	}
 	
