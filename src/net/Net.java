@@ -63,6 +63,10 @@ public class Net {
 		warstwa2=new ArrayList<>();
 		warstwa2.add(n5);
 		warstwa2.add(n6);
+		
+		keys.put(1, key1);
+		keys.put(1, key1);
+		keys.put(1, key1);
 	}
 	
 	

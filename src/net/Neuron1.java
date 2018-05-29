@@ -20,6 +20,7 @@ public class Neuron1 {
 			}
 			prog=r.nextInt(1);
 			System.out.println(" prog:"+prog);
+			
 		}
 		
 		public Neuron1(double[] w){
